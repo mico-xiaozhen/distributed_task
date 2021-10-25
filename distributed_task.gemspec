@@ -4,7 +4,7 @@ require_relative "lib/distributed_task/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "distributed_task"
-  spec.version       = DistributedTask::VERSION
+  spec.version       = "0.1.2"
   spec.authors       = ["mico_xiaozhen@sina.com"]
   spec.email         = ["mico_xiaozhen@sina.com"]
 
