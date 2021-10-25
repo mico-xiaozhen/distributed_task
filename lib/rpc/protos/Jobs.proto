@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package protos;
+
+// 定义一个服务
+service Jobs {
+    // 定义这个服务的rpc方法
+    // 生成的接口代码作为客户端与服务端的约定，服务端必须实现定义的所有接口方法，客户端直接调用同名方法向服务端发起请求。
+    rpc GetJob(GetJobReq) returns (GetJobResp) { }
+}
+
+// message类型定义了 这个请求的消息格式
+message GetJobReq {
+    // 请求消息格式 无符号64位整型
+    string ip = 20;
+    string name = 50;
+}
+
+// message类型定义了 这个响应的消息格式
+message GetJobResp {
+    string ip = 20;
+    string name = 50;
+    uint64 flag = 1;
+}
